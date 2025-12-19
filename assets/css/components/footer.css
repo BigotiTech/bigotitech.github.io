@@ -3,6 +3,7 @@
    ============================================ */
 
 .footer {
+    display: block;
     background: var(--bg-secondary);
     border-top: 1px solid var(--border-color);
     padding: var(--space-12) var(--space-6) var(--space-8);
