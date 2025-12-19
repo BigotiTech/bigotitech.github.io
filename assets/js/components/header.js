@@ -15,7 +15,7 @@ class BigotiHeader extends HTMLElement {
                 </a>
                 <ul class="header__menu">
                     <li><a href="${basePath}#apps" class="header__link">Apps</a></li>
-                    <li><a href="${basePath}#contacto" class="header__link">Contacto</a></li>
+                    <li><a href="#contacto" class="header__link">Contacto</a></li>
                 </ul>
             </nav>
         `;
