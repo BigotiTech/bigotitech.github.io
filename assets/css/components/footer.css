@@ -66,6 +66,7 @@
     font-size: var(--text-sm);
     line-height: var(--leading-relaxed);
     margin: 0;
+    white-space: nowrap;
 }
 
 /* Links section */
@@ -256,6 +257,10 @@
 
     .footer__brand {
         max-width: 100%;
+    }
+
+    .footer__tagline {
+        white-space: normal;
     }
 
     .footer__logo {
