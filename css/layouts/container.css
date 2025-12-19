@@ -1,0 +1,62 @@
+/* ============================================
+   LAYOUTS - Containers and structure
+   ============================================ */
+
+/* Main container */
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 var(--space-6);
+}
+
+/* Modifiers */
+.container--narrow {
+    max-width: 800px;
+}
+
+.container--wide {
+    max-width: 1200px;
+}
+
+.container--full {
+    max-width: none;
+}
+
+/* Content wrapper */
+.content {
+    padding: var(--space-12) var(--space-6);
+}
+
+.content--compact {
+    padding: var(--space-10) var(--space-6);
+}
+
+.content--flush {
+    padding: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 var(--space-5);
+    }
+
+    .content {
+        padding: var(--space-8) var(--space-5);
+    }
+
+    .content--compact {
+        padding: var(--space-8) var(--space-5);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 var(--space-4);
+    }
+
+    .content {
+        padding: var(--space-8) var(--space-4);
+    }
+}

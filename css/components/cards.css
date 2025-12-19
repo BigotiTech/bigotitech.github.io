@@ -1,0 +1,116 @@
+/* ============================================
+   CARDS - Card components
+   ============================================ */
+
+/* Base card */
+.card {
+    background: var(--bg-elevated);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    margin-bottom: var(--space-5);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Section (larger card variant) */
+.section {
+    background: var(--bg-elevated);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    margin-bottom: var(--space-6);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+    transition: box-shadow var(--transition-slow);
+}
+
+.section:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+/* Card modifiers */
+.card--intro {
+    position: relative;
+    padding-left: var(--space-7, 1.75rem);
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+}
+
+.card--intro::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--gradient-accent);
+    border-radius: 2px;
+}
+
+/* Section title */
+.section__title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-6);
+}
+
+.section__title::before {
+    content: '';
+    width: 4px;
+    height: 28px;
+    background: var(--gradient-accent);
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+/* Card title */
+.card__title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-4);
+}
+
+.card__title::before {
+    content: '';
+    width: 3px;
+    height: 20px;
+    background: var(--color-primary);
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+/* Highlight box */
+.highlight {
+    background: linear-gradient(135deg, rgba(98, 0, 238, 0.05) 0%, rgba(3, 218, 198, 0.05) 100%);
+    padding: var(--space-4) var(--space-5);
+    border-radius: var(--radius-md);
+    margin: var(--space-4) 0;
+    border-left: 3px solid var(--color-primary);
+}
+
+.highlight p {
+    margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    .highlight {
+        background: linear-gradient(135deg, rgba(98, 0, 238, 0.15) 0%, rgba(3, 218, 198, 0.1) 100%);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section,
+    .card {
+        padding: var(--space-5);
+    }
+}

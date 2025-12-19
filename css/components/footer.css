@@ -1,0 +1,79 @@
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+    text-align: center;
+    padding: var(--space-8) var(--space-6);
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+}
+
+/* Modifiers */
+.footer--elevated {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    padding: var(--space-10) var(--space-6);
+}
+
+/* Contact in footer */
+.footer__contact {
+    margin-bottom: var(--space-4);
+}
+
+.footer__contact a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--color-primary);
+    font-weight: var(--font-semibold);
+    padding: var(--space-2) var(--space-5);
+    background: rgba(98, 0, 238, 0.08);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-slow);
+}
+
+.footer__contact a:hover {
+    background: var(--color-primary);
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Copyright */
+.footer__copyright {
+    margin: 0;
+    color: var(--text-muted);
+}
+
+/* Contact box (for privacy pages) */
+.contact-box {
+    background: var(--gradient-accent);
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+    margin-top: var(--space-4);
+    text-align: center;
+}
+
+.contact-box p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--space-2);
+    font-size: var(--text-sm);
+}
+
+.contact-box__email {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+    color: #FFFFFF !important;
+    padding: var(--space-2) var(--space-6);
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-full);
+    margin-top: var(--space-2);
+    transition: background var(--transition-slow);
+}
+
+.contact-box__email:hover {
+    background: rgba(255, 255, 255, 0.25);
+    text-decoration: none;
+}
