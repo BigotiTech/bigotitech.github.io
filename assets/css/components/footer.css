@@ -291,4 +291,25 @@
         flex-direction: column;
         gap: var(--space-6);
     }
+
+    .contact-box__email {
+        font-size: var(--text-sm);
+    }
+}
+
+@media (max-width: 360px) {
+    .contact-box {
+        padding: var(--space-4) var(--space-4);
+    }
+
+    .contact-box__icon {
+        width: 40px;
+        height: 40px;
+        font-size: var(--text-lg);
+    }
+
+    .contact-box__email {
+        font-size: var(--text-xs);
+        word-break: break-all;
+    }
 }
