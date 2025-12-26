@@ -161,6 +161,8 @@
     color: var(--text-muted);
     font-size: var(--text-sm);
     margin: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .footer__legal {
