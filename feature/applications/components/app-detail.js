@@ -56,25 +56,50 @@ class BigotiAppDetail extends HTMLElement {
     }
 
     initCarousel() {
+        const carousel = this.querySelector('.app-detail-carousel');
         const track = this.querySelector('.app-detail-carousel__track');
-        const slides = this.querySelectorAll('.app-detail-carousel__slide');
+        const slides = Array.from(this.querySelectorAll('.app-detail-carousel__slide'));
         const dots = this.querySelectorAll('.app-detail-carousel__dot');
         const prevBtn = this.querySelector('.app-detail-carousel__nav--prev');
         const nextBtn = this.querySelector('.app-detail-carousel__nav--next');
 
         if (!track || slides.length <= 1) return;
 
+        const total = slides.length;
         let currentIndex = 0;
-        const totalSlides = slides.length;
 
-        const goToSlide = (index) => {
-            if (index < 0) index = totalSlides - 1;
-            if (index >= totalSlides) index = 0;
-            currentIndex = index;
+        // Helper to get circular index
+        const getCircularIndex = (index) => ((index % total) + total) % total;
 
-            const slideWidth = slides[0].offsetWidth;
-            const gap = 16; // Same as CSS gap
-            track.style.transform = `translateX(-${currentIndex * (slideWidth + gap)}px)`;
+        const updateCarousel = () => {
+            slides.forEach((slide, i) => {
+                slide.classList.remove(
+                    'app-detail-carousel__slide--active',
+                    'app-detail-carousel__slide--prev',
+                    'app-detail-carousel__slide--next',
+                    'app-detail-carousel__slide--hidden'
+                );
+
+                const prevIndex = getCircularIndex(currentIndex - 1);
+                const nextIndex = getCircularIndex(currentIndex + 1);
+
+                if (i === currentIndex) {
+                    slide.classList.add('app-detail-carousel__slide--active');
+                    slide.style.transform = 'translateX(0) scale(1)';
+                    slide.style.order = '2';
+                } else if (i === prevIndex) {
+                    slide.classList.add('app-detail-carousel__slide--prev');
+                    slide.style.transform = `translateX(0) scale(0.9)`;
+                    slide.style.order = '1';
+                } else if (i === nextIndex) {
+                    slide.classList.add('app-detail-carousel__slide--next');
+                    slide.style.transform = `translateX(0) scale(0.9)`;
+                    slide.style.order = '3';
+                } else {
+                    slide.classList.add('app-detail-carousel__slide--hidden');
+                    slide.style.order = '4';
+                }
+            });
 
             // Update dots
             dots.forEach((dot, i) => {
@@ -82,9 +107,17 @@ class BigotiAppDetail extends HTMLElement {
             });
         };
 
+        const goToSlide = (index) => {
+            currentIndex = getCircularIndex(index);
+            updateCarousel();
+        };
+
+        const next = () => goToSlide(currentIndex + 1);
+        const prev = () => goToSlide(currentIndex - 1);
+
         // Navigation buttons
-        if (prevBtn) prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
-        if (nextBtn) nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+        if (prevBtn) prevBtn.addEventListener('click', prev);
+        if (nextBtn) nextBtn.addEventListener('click', next);
 
         // Dots navigation
         dots.forEach(dot => {
@@ -97,28 +130,61 @@ class BigotiAppDetail extends HTMLElement {
         let startX = 0;
         let isDragging = false;
 
-        track.addEventListener('touchstart', (e) => {
+        carousel.addEventListener('touchstart', (e) => {
             startX = e.touches[0].clientX;
             isDragging = true;
         }, { passive: true });
 
-        track.addEventListener('touchend', (e) => {
+        carousel.addEventListener('touchend', (e) => {
             if (!isDragging) return;
             const endX = e.changedTouches[0].clientX;
             const diff = startX - endX;
 
             if (Math.abs(diff) > 50) {
-                if (diff > 0) goToSlide(currentIndex + 1);
-                else goToSlide(currentIndex - 1);
+                if (diff > 0) next();
+                else prev();
             }
             isDragging = false;
         }, { passive: true });
 
+        // Mouse drag support
+        let mouseStartX = 0;
+        let isMouseDragging = false;
+
+        carousel.addEventListener('mousedown', (e) => {
+            mouseStartX = e.clientX;
+            isMouseDragging = true;
+            carousel.style.cursor = 'grabbing';
+        });
+
+        document.addEventListener('mouseup', (e) => {
+            if (!isMouseDragging) return;
+            const diff = mouseStartX - e.clientX;
+
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) next();
+                else prev();
+            }
+            isMouseDragging = false;
+            carousel.style.cursor = 'grab';
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+            isMouseDragging = false;
+            carousel.style.cursor = 'grab';
+        });
+
         // Keyboard navigation
         this.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') goToSlide(currentIndex - 1);
-            if (e.key === 'ArrowRight') goToSlide(currentIndex + 1);
+            if (e.key === 'ArrowLeft') prev();
+            if (e.key === 'ArrowRight') next();
         });
+
+        // Set initial cursor
+        carousel.style.cursor = 'grab';
+
+        // Initialize
+        updateCarousel();
     }
 
     t(key, fallback) {
