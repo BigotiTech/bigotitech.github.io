@@ -130,11 +130,59 @@
     margin: 0;
 }
 
+/* Projects filters */
+.projects-filters {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-8);
+    flex-wrap: wrap;
+}
+
+.projects-filter {
+    padding: var(--space-2) var(--space-5);
+    background: transparent;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-full);
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.projects-filter:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    background: rgba(98, 0, 238, 0.05);
+}
+
+.projects-filter--active {
+    background: var(--gradient-accent);
+    border-color: transparent;
+    color: white;
+    box-shadow: 0 4px 15px rgba(98, 0, 238, 0.3);
+}
+
+.projects-filter--active:hover {
+    background: var(--gradient-accent);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(98, 0, 238, 0.4);
+}
+
 /* Apps section - modern cards */
 .apps-modern {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-6);
+}
+
+/* Hidden animation for filtered projects */
+.app-modern--hidden {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
 }
 
 .app-modern {

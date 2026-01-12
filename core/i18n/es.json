@@ -44,8 +44,8 @@
     "visionText": "Convertirnos en un referente del desarrollo indie, creando productos que destaquen por su calidad y atencion al detalle.",
     "values": "Valores",
     "valuesText": "Calidad sobre cantidad. Privacidad del usuario. Diseno centrado en las personas. Mejora continua y aprendizaje constante.",
-    "appsTitle": "Nuestras Aplicaciones",
-    "appsSubtitle": "Proyectos en los que estamos trabajando",
+    "projectsTitle": "Nuestros Proyectos",
+    "projectsSubtitle": "Proyectos en los que estamos trabajando",
     "rokubDesc": "El clasico juego de dados donde la estrategia y la suerte se combinan para alcanzar los 10.000 puntos.",
     "leporiaDesc": "Evalua tu cartera financiera segun tus metas personales de forma sencilla y visual.",
     "teamTitle": "Nuestro Equipo",
@@ -82,5 +82,10 @@
     "gameDesigner": "Game Designer",
     "gameDesignerRole": "Mecanicas & Balance",
     "gameDesignerBio": "Enfocado en crear experiencias de juego equilibradas y divertidas. La diversion es la prioridad."
+  },
+  "filter": {
+    "all": "Todos",
+    "web": "Web",
+    "apps": "Aplicaciones"
   }
 }

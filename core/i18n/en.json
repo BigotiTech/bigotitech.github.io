@@ -44,8 +44,8 @@
     "visionText": "Become a reference in indie development, creating products that stand out for their quality and attention to detail.",
     "values": "Values",
     "valuesText": "Quality over quantity. User privacy. People-centered design. Continuous improvement and constant learning.",
-    "appsTitle": "Our Apps",
-    "appsSubtitle": "Projects we are working on",
+    "projectsTitle": "Our Projects",
+    "projectsSubtitle": "Projects we are working on",
     "rokubDesc": "The classic dice game where strategy and luck combine to reach 10,000 points.",
     "leporiaDesc": "Evaluate your financial portfolio according to your personal goals in a simple and visual way.",
     "teamTitle": "Our Team",
@@ -82,5 +82,10 @@
     "gameDesigner": "Game Designer",
     "gameDesignerRole": "Mechanics & Balance",
     "gameDesignerBio": "Focused on creating balanced and fun gaming experiences. Fun is the priority."
+  },
+  "filter": {
+    "all": "All",
+    "web": "Web",
+    "apps": "Apps"
   }
 }

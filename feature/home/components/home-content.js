@@ -19,13 +19,45 @@ class BigotiHomeContent extends HTMLElement {
             await i18n.init();
             this.render();
             await this.loadIcons();
+            this.setupFilters();
             i18n.onLanguageChange(async () => {
                 this.render();
                 await this.loadIcons();
+                this.setupFilters();
             });
         } else {
             await this.loadIcons();
+            this.setupFilters();
         }
+    }
+
+    setupFilters() {
+        const filterBtns = this.querySelectorAll('.projects-filter');
+        const projects = this.querySelectorAll('.app-modern');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('projects-filter--active'));
+                btn.classList.add('projects-filter--active');
+
+                // Filter projects
+                const filter = btn.dataset.filter;
+                projects.forEach(project => {
+                    if (filter === 'all' || project.dataset.type === filter) {
+                        project.style.display = '';
+                        project.classList.remove('app-modern--hidden');
+                    } else {
+                        project.classList.add('app-modern--hidden');
+                        setTimeout(() => {
+                            if (project.classList.contains('app-modern--hidden')) {
+                                project.style.display = 'none';
+                            }
+                        }, 300);
+                    }
+                });
+            });
+        });
     }
 
     async loadIcons() {
@@ -112,14 +144,26 @@ class BigotiHomeContent extends HTMLElement {
                     </div>
                 </section>
 
-                <!-- Aplicaciones -->
+                <!-- Proyectos -->
                 <section id="apps" class="section-fw section-fw--accent">
                     <div class="section-fw__inner">
-                        <h2 class="section-fw__title">${this.t('home.appsTitle', 'Nuestras Aplicaciones')}</h2>
-                        <p class="section-fw__subtitle">${this.t('home.appsSubtitle', 'Proyectos en los que estamos trabajando')}</p>
+                        <h2 class="section-fw__title">${this.t('home.projectsTitle', 'Nuestros Proyectos')}</h2>
+                        <p class="section-fw__subtitle">${this.t('home.projectsSubtitle', 'Proyectos en los que estamos trabajando')}</p>
+
+                        <div class="projects-filters">
+                            <button class="projects-filter projects-filter--active" data-filter="all">
+                                ${this.t('filter.all', 'Todos')}
+                            </button>
+                            <button class="projects-filter" data-filter="web">
+                                ${this.t('filter.web', 'Web')}
+                            </button>
+                            <button class="projects-filter" data-filter="app">
+                                ${this.t('filter.apps', 'Aplicaciones')}
+                            </button>
+                        </div>
 
                         <div class="apps-modern">
-                            <a href="feature/applications/rokub-10000/" class="app-modern">
+                            <a href="feature/applications/rokub-10000/" class="app-modern" data-type="app">
                                 <img src="feature/applications/rokub-10000/assets/icon.webp" alt="Rokub 10000" class="app-modern__icon">
                                 <div class="app-modern__content">
                                     <h3 class="app-modern__name">Rokub 10000</h3>
@@ -127,7 +171,7 @@ class BigotiHomeContent extends HTMLElement {
                                     <span class="app-modern__cta">${this.t('common.learnMore', 'Ver mas')}</span>
                                 </div>
                             </a>
-                            <a href="feature/applications/leporia/" class="app-modern">
+                            <a href="feature/applications/leporia/" class="app-modern" data-type="web">
                                 <img src="feature/applications/leporia/assets/icon.png" alt="Leporia" class="app-modern__icon">
                                 <div class="app-modern__content">
                                     <h3 class="app-modern__name">Leporia</h3>
