@@ -1,8 +1,8 @@
 {
   "id": "leporia",
   "name": "Leporia",
-  "tagline": "Evalua tu cartera financiera segun tus metas personales de forma sencilla y visual.",
-  "description": "Leporia es una herramienta web que te ayuda a analizar y evaluar tu cartera de inversiones basandose en tus objetivos financieros personales. Define tus metas, introduce tu cartera y obten una vision clara de tu situacion financiera.",
+  "tagline": "Evalúa tu cartera financiera según tus metas personales de forma sencilla y visual.",
+  "description": "Leporia es una herramienta web que te ayuda a analizar y evaluar tu cartera de inversiones basándose en tus objetivos financieros personales. Define tus metas, introduce tu cartera y obtén una visión clara de tu situación financiera.",
   "icon": "assets/icon.png",
   "platforms": [
     {
@@ -14,9 +14,9 @@
     }
   ],
   "features": [
-    { "icon": "chart-bar", "text": "Analisis personalizado" },
-    { "icon": "chart-line", "text": "Visualizacion clara de datos" },
-    { "icon": "target", "text": "Definicion de metas financieras" },
+    { "icon": "chart-bar", "text": "Análisis personalizado" },
+    { "icon": "chart-line", "text": "Visualización clara de datos" },
+    { "icon": "target", "text": "Definición de metas financieras" },
     { "icon": "lock", "text": "Privacidad total de tus datos" },
     { "icon": "sparkles", "text": "Sin registro requerido" },
     { "icon": "gem", "text": "Interfaz moderna y accesible" }
@@ -30,11 +30,11 @@
       "disabledText": "Visitar (Pronto)"
     },
     "secondary": {
-      "text": "Politica de Privacidad",
+      "text": "Política de Privacidad",
       "url": "privacy/"
     }
   },
   "meta": {
-    "metaDescription": "Leporia - Evalua tu cartera financiera segun tus metas personales. Desarrollado por BigotiTech."
+    "metaDescription": "Leporia - Evalúa tu cartera financiera según tus metas personales. Desarrollado por BigotiTech."
   }
 }

@@ -13,76 +13,76 @@
   },
   "footer": {
     "copyright": "© {year} BigotiTech. Todos los derechos reservados.",
-    "tagline": "Creando experiencias digitales unicas",
+    "tagline": "Creando experiencias digitales únicas",
     "contact": "Contacto",
     "email": "bigotitech@gmail.com"
   },
   "common": {
-    "learnMore": "Ver mas",
+    "learnMore": "Ver más",
     "download": "Descargar",
-    "comingSoon": "Proximamente",
+    "comingSoon": "Próximamente",
     "soon": "Pronto",
     "screenshots": "Capturas de pantalla",
-    "features": "Caracteristicas",
-    "privacyPolicy": "Politica de Privacidad",
+    "features": "Características",
+    "privacyPolicy": "Política de Privacidad",
     "visit": "Visitar",
     "googlePlay": "Google Play",
     "appStore": "App Store",
     "web": "Web",
     "android": "Android",
     "ios": "iOS",
-    "tryIt": "Pruebalo",
-    "downloadIt": "Descargalo"
+    "tryIt": "Pruébalo",
+    "downloadIt": "Descárgalo"
   },
   "home": {
-    "heroTagline": "Creamos experiencias digitales unicas",
+    "heroTagline": "Creamos experiencias digitales únicas",
     "aboutTitle": "Sobre Nosotros",
-    "aboutSubtitle": "Un estudio independiente con pasion por crear",
-    "aboutIntro": "Somos un estudio independiente de desarrollo de software enfocado en crear aplicaciones y juegos que combinan diseno intuitivo con tecnologia moderna. Nos apasiona transformar ideas en productos digitales que aporten valor real a los usuarios.",
-    "mission": "Mision",
+    "aboutSubtitle": "Un estudio independiente con pasión por crear",
+    "aboutIntro": "Somos un estudio independiente de desarrollo de software enfocado en crear aplicaciones y juegos que combinan diseño intuitivo con tecnología moderna. Nos apasiona transformar ideas en productos digitales que aporten valor real a los usuarios.",
+    "mission": "Misión",
     "missionText": "Desarrollar aplicaciones y juegos de calidad que sean accesibles, intuitivos y que mejoren la experiencia digital de nuestros usuarios.",
-    "vision": "Vision",
-    "visionText": "Convertirnos en un referente del desarrollo indie, creando productos que destaquen por su calidad y atencion al detalle.",
+    "vision": "Visión",
+    "visionText": "Convertirnos en un referente del desarrollo indie, creando productos que destaquen por su calidad y atención al detalle.",
     "values": "Valores",
-    "valuesText": "Calidad sobre cantidad. Privacidad del usuario. Diseno centrado en las personas. Mejora continua y aprendizaje constante.",
+    "valuesText": "Calidad sobre cantidad. Privacidad del usuario. Diseño centrado en las personas. Mejora continua y aprendizaje constante.",
     "projectsTitle": "Nuestros Proyectos",
     "projectsSubtitle": "Proyectos en los que estamos trabajando",
-    "rokubDesc": "El clasico juego de dados donde la estrategia y la suerte se combinan para alcanzar los 10.000 puntos.",
-    "leporiaDesc": "Evalua tu cartera financiera segun tus metas personales de forma sencilla y visual.",
+    "rokubDesc": "El clásico juego de dados donde la estrategia y la suerte se combinan para alcanzar los 10.000 puntos.",
+    "leporiaDesc": "Evalúa tu cartera financiera según tus metas personales de forma sencilla y visual.",
     "teamTitle": "Nuestro Equipo",
-    "teamSubtitle": "Las personas detras de BigotiTech"
+    "teamSubtitle": "Las personas detrás de BigotiTech"
   },
   "news": {
     "pageTitle": "Noticias",
     "pageSubtitle": "Actualizaciones y novedades de BigotiTech",
-    "latestNews": "Ultimas Noticias",
+    "latestNews": "Últimas Noticias",
     "categories": {
       "announcement": "Anuncio",
       "release": "Lanzamiento",
-      "update": "Actualizacion"
+      "update": "Actualización"
     }
   },
   "privacy": {
-    "pageTitle": "Politica de Privacidad",
-    "lastUpdated": "Ultima actualizacion",
+    "pageTitle": "Política de Privacidad",
+    "lastUpdated": "Última actualización",
     "backToApp": "Volver a {appName}"
   },
   "app": {
-    "description": "Descripcion",
+    "description": "Descripción",
     "platforms": "Plataformas",
     "tryApp": "Prueba {appName}",
     "downloadApp": "Descarga {appName}"
   },
   "team": {
     "developer": "Desarrollador",
-    "developerRole": "Desarrollo & Diseno",
-    "developerBio": "Apasionado por crear aplicaciones utiles y bien disenadas. Enfocado en la experiencia del usuario y el codigo limpio.",
-    "designer": "Disenador",
+    "developerRole": "Desarrollo & Diseño",
+    "developerBio": "Apasionado por crear aplicaciones útiles y bien diseñadas. Enfocado en la experiencia del usuario y el código limpio.",
+    "designer": "Diseñador",
     "designerRole": "UI/UX & Arte",
-    "designerBio": "Especialista en crear interfaces intuitivas y visualmente atractivas. Cada pixel cuenta.",
+    "designerBio": "Especialista en crear interfaces intuitivas y visualmente atractivas. Cada píxel cuenta.",
     "gameDesigner": "Game Designer",
-    "gameDesignerRole": "Mecanicas & Balance",
-    "gameDesignerBio": "Enfocado en crear experiencias de juego equilibradas y divertidas. La diversion es la prioridad."
+    "gameDesignerRole": "Mecánicas & Balance",
+    "gameDesignerBio": "Enfocado en crear experiencias de juego equilibradas y divertidas. La diversión es la prioridad."
   },
   "filter": {
     "all": "Todos",

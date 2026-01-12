@@ -1,8 +1,8 @@
 {
   "id": "rokub-10000",
   "name": "Rokub 10000",
-  "tagline": "El clasico juego de dados donde la estrategia y la suerte se combinan para alcanzar los 10.000 puntos.",
-  "description": "Rokub 10000 es nuestra version del clasico juego de dados conocido en diferentes partes del mundo. Lanza los dados, suma puntos y decide cuando arriesgar o asegurar tu puntuacion. Un juego perfecto para partidas rapidas o sesiones prolongadas con amigos y familia.",
+  "tagline": "El clásico juego de dados donde la estrategia y la suerte se combinan para alcanzar los 10.000 puntos.",
+  "description": "Rokub 10000 es nuestra versión del clásico juego de dados conocido en diferentes partes del mundo. Lanza los dados, suma puntos y decide cuándo arriesgar o asegurar tu puntuación. Un juego perfecto para partidas rápidas o sesiones prolongadas con amigos y familia.",
   "icon": "assets/icon.webp",
   "platforms": [
     {
@@ -14,18 +14,18 @@
     }
   ],
   "features": [
-    { "icon": "dice", "text": "Reglas clasicas del 10000" },
+    { "icon": "dice", "text": "Reglas clásicas del 10000" },
     { "icon": "sparkles", "text": "Interfaz intuitiva" },
     { "icon": "users", "text": "Multijugador local" },
-    { "icon": "chart-bar", "text": "Estadisticas de partidas" },
+    { "icon": "chart-bar", "text": "Estadísticas de partidas" },
     { "icon": "ban", "text": "Sin anuncios intrusivos" },
-    { "icon": "wifi-off", "text": "Funciona sin conexion" }
+    { "icon": "wifi-off", "text": "Funciona sin conexión" }
   ],
   "screenshots": [
     { "src": "feature/applications/rokub-10000/assets/screenshots/1.png", "alt": "Pantalla principal de Rokub 10000" },
     { "src": "feature/applications/rokub-10000/assets/screenshots/2.png", "alt": "Partida en curso" },
-    { "src": "feature/applications/rokub-10000/assets/screenshots/3.png", "alt": "Seleccion de dados" },
-    { "src": "feature/applications/rokub-10000/assets/screenshots/4.png", "alt": "Estadisticas de juego" }
+    { "src": "feature/applications/rokub-10000/assets/screenshots/3.png", "alt": "Selección de dados" },
+    { "src": "feature/applications/rokub-10000/assets/screenshots/4.png", "alt": "Estadísticas de juego" }
   ],
   "cta": {
     "primary": {
@@ -34,11 +34,11 @@
       "disabled": false
     },
     "secondary": {
-      "text": "Politica de Privacidad",
+      "text": "Política de Privacidad",
       "url": "privacy/"
     }
   },
   "meta": {
-    "metaDescription": "Rokub 10000 - El clasico juego de dados donde la estrategia y la suerte se combinan. Desarrollado por BigotiTech."
+    "metaDescription": "Rokub 10000 - El clásico juego de dados donde la estrategia y la suerte se combinan. Desarrollado por BigotiTech."
   }
 }
