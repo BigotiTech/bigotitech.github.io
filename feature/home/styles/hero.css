@@ -6,8 +6,12 @@
 .hero {
     position: relative;
     background: linear-gradient(135deg, #6200EE 0%, #7C4DFF 50%, #9C7CFF 100%);
-    padding: var(--space-20) var(--space-6);
+    min-height: 100vh;
+    padding: 60px var(--space-6) var(--space-6);
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Capa diagonal clara (como en el icono de la app) */
@@ -251,7 +255,8 @@
 /* Responsive */
 @media (max-width: 768px) {
     .hero {
-        padding: var(--space-16) var(--space-5);
+        min-height: 100vh;
+        padding: 60px var(--space-5) var(--space-5);
     }
 
     .hero--compact {
