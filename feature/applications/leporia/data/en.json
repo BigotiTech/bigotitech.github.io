@@ -1,0 +1,40 @@
+{
+  "id": "leporia",
+  "name": "Leporia",
+  "tagline": "Evaluate your financial portfolio based on your personal goals in a simple and visual way.",
+  "description": "Leporia is a web tool that helps you analyze and evaluate your investment portfolio based on your personal financial goals. Define your goals, enter your portfolio, and get a clear view of your financial situation.",
+  "icon": "assets/icon.png",
+  "platforms": [
+    {
+      "id": "web",
+      "name": "Web",
+      "icon": "globe",
+      "url": null,
+      "status": "coming_soon"
+    }
+  ],
+  "features": [
+    { "icon": "chart-bar", "text": "Personalized analysis" },
+    { "icon": "chart-line", "text": "Clear data visualization" },
+    { "icon": "target", "text": "Financial goal setting" },
+    { "icon": "lock", "text": "Total privacy for your data" },
+    { "icon": "sparkles", "text": "No registration required" },
+    { "icon": "gem", "text": "Modern and accessible interface" }
+  ],
+  "screenshots": [],
+  "cta": {
+    "primary": {
+      "text": "Visit",
+      "url": null,
+      "disabled": true,
+      "disabledText": "Visit (Coming soon)"
+    },
+    "secondary": {
+      "text": "Privacy Policy",
+      "url": "privacy/"
+    }
+  },
+  "meta": {
+    "metaDescription": "Leporia - Evaluate your financial portfolio based on your personal goals. Developed by BigotiTech."
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "appId": "rokub-10000",
+  "appName": "Rokub 10000",
+  "lastUpdated": "2025-12",
+  "lastUpdatedFormatted": "December 2025",
+  "intro": "This Privacy Policy describes how <strong>Rokub 10000</strong> collects, uses, and shares information when you use our mobile application.",
+  "sections": [
+    {
+      "id": "info-collected",
+      "title": "1. Information We Collect",
+      "content": "<p>Our application <strong>does not collect personally identifiable information</strong> directly. However, we use third-party services that may collect information to display ads.</p><h3>Game Data</h3><p>The app stores locally on your device:</p><ul><li>Player names you create</li><li>Scores and game history</li><li>Configuration preferences (sound, vibration, dark mode)</li></ul><div class=\"highlight\"><p><strong>Important:</strong> This data is stored only on your device and is not transmitted to any external server.</p></div>"
+    },
+    {
+      "id": "third-party",
+      "title": "2. Third-Party Services",
+      "content": "<p>We use <strong>Google AdMob</strong> to display ads in the app. Google AdMob may collect certain information to provide personalized ads:</p><ul><li>Device identifiers</li><li>App usage data</li><li>Approximate location information (IP-based)</li><li>Ad interaction data</li></ul><p>For more information:</p><ul><li><a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Google Privacy Policy</a></li><li><a href=\"https://policies.google.com/technologies/partner-sites\" target=\"_blank\" rel=\"noopener\">How Google uses information</a></li></ul>"
+    },
+    {
+      "id": "ads",
+      "title": "3. Advertisements",
+      "content": "<p>The app displays the following types of ads:</p><ul><li><strong>Banners:</strong> Small ads at the bottom of some screens.</li><li><strong>Interstitials:</strong> Full-screen ads after completing a game.</li></ul><p>You can opt out of personalized ads by adjusting Google ad settings on your device.</p>"
+    },
+    {
+      "id": "permissions",
+      "title": "4. App Permissions",
+      "content": "<ul><li><strong>Internet:</strong> Required to load and display ads.</li><li><strong>Network state:</strong> To check connectivity before loading ads.</li><li><strong>Vibration:</strong> For tactile feedback during the game (optional).</li></ul>"
+    },
+    {
+      "id": "security",
+      "title": "5. Data Security",
+      "content": "<p>All game data is stored locally on your device. We do not transmit or store your data on external servers. The security of your data depends on your own device's security measures.</p>"
+    },
+    {
+      "id": "children",
+      "title": "6. Children's Privacy",
+      "content": "<p>Our app is not specifically aimed at children under 13 years old. We do not intentionally collect personal information from children. If you are a parent or guardian and believe your child has provided us with personal information, please contact us.</p>"
+    },
+    {
+      "id": "changes",
+      "title": "7. Changes to This Policy",
+      "content": "<p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the \"Last updated\" date.</p>"
+    },
+    {
+      "id": "rights",
+      "title": "8. Your Rights",
+      "content": "<p>You have the right to:</p><ul><li>Delete all game data by uninstalling the app</li><li>Opt out of personalized ads through your device settings</li><li>Contact us with any questions about your data</li></ul>"
+    },
+    {
+      "id": "contact",
+      "title": "9. Contact",
+      "content": "<p>If you have questions or comments about this Privacy Policy, you can contact us:</p>",
+      "hasContact": true
+    }
+  ],
+  "contact": {
+    "email": "bigotitech@proton.me"
+  },
+  "meta": {
+    "metaDescription": "Rokub 10000 Privacy Policy - BigotiTech"
+  }
+}

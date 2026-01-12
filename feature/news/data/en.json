@@ -1,0 +1,25 @@
+{
+  "news": [
+    {
+      "id": "3",
+      "title": "New BigotiTech website",
+      "date": "2026-01-12",
+      "category": "announcement",
+      "summary": "We launch our new website with a renewed design, where you can discover all our projects and stay up to date with the latest news."
+    },
+    {
+      "id": "2",
+      "title": "Rokub 10000 available",
+      "date": "2026-01-02",
+      "category": "release",
+      "summary": "Our dice game is now available. Challenge your luck and strategy in this reinvented classic for mobile devices."
+    },
+    {
+      "id": "1",
+      "title": "Leporia in development",
+      "date": "2025-11-15",
+      "category": "update",
+      "summary": "We continue working on Leporia, our tool for evaluating financial portfolios. We will soon share more details about its progress."
+    }
+  ]
+}

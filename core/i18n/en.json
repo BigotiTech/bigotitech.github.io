@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "lang": "en",
+    "langName": "English",
+    "dir": "ltr"
+  },
+  "nav": {
+    "about": "About",
+    "apps": "Apps",
+    "team": "Team",
+    "news": "News"
+  },
+  "footer": {
+    "copyright": "© {year} BigotiTech. All rights reserved.",
+    "tagline": "Creating unique digital experiences",
+    "contact": "Contact",
+    "email": "bigotitech@gmail.com"
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "download": "Download",
+    "comingSoon": "Coming soon",
+    "soon": "Soon",
+    "screenshots": "Screenshots",
+    "features": "Features",
+    "privacyPolicy": "Privacy Policy",
+    "visit": "Visit",
+    "googlePlay": "Google Play",
+    "appStore": "App Store",
+    "web": "Web",
+    "android": "Android",
+    "ios": "iOS",
+    "tryIt": "Try it",
+    "downloadIt": "Download it"
+  },
+  "home": {
+    "heroTagline": "We create unique digital experiences",
+    "aboutTitle": "About Us",
+    "aboutSubtitle": "An independent studio with a passion for creating",
+    "aboutIntro": "We are an independent software development studio focused on creating apps and games that combine intuitive design with modern technology. We are passionate about transforming ideas into digital products that provide real value to users.",
+    "mission": "Mission",
+    "missionText": "Develop quality apps and games that are accessible, intuitive, and improve our users' digital experience.",
+    "vision": "Vision",
+    "visionText": "Become a reference in indie development, creating products that stand out for their quality and attention to detail.",
+    "values": "Values",
+    "valuesText": "Quality over quantity. User privacy. People-centered design. Continuous improvement and constant learning.",
+    "appsTitle": "Our Apps",
+    "appsSubtitle": "Projects we are working on",
+    "rokubDesc": "The classic dice game where strategy and luck combine to reach 10,000 points.",
+    "leporiaDesc": "Evaluate your financial portfolio according to your personal goals in a simple and visual way.",
+    "teamTitle": "Our Team",
+    "teamSubtitle": "The people behind BigotiTech"
+  },
+  "news": {
+    "pageTitle": "News",
+    "pageSubtitle": "Updates and news from BigotiTech",
+    "latestNews": "Latest News",
+    "categories": {
+      "announcement": "Announcement",
+      "release": "Release",
+      "update": "Update"
+    }
+  },
+  "privacy": {
+    "pageTitle": "Privacy Policy",
+    "lastUpdated": "Last updated",
+    "backToApp": "Back to {appName}"
+  },
+  "app": {
+    "description": "Description",
+    "platforms": "Platforms",
+    "tryApp": "Try {appName}",
+    "downloadApp": "Download {appName}"
+  },
+  "team": {
+    "developer": "Developer",
+    "developerRole": "Development & Design",
+    "developerBio": "Passionate about creating useful and well-designed applications. Focused on user experience and clean code.",
+    "designer": "Designer",
+    "designerRole": "UI/UX & Art",
+    "designerBio": "Specialist in creating intuitive and visually attractive interfaces. Every pixel counts.",
+    "gameDesigner": "Game Designer",
+    "gameDesignerRole": "Mechanics & Balance",
+    "gameDesignerBio": "Focused on creating balanced and fun gaming experiences. Fun is the priority."
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "rokub-10000",
+  "name": "Rokub 10000",
+  "tagline": "The classic dice game where strategy and luck combine to reach 10,000 points.",
+  "description": "Rokub 10000 is our version of the classic dice game known in different parts of the world. Roll the dice, add up points, and decide when to risk or secure your score. A perfect game for quick matches or extended sessions with friends and family.",
+  "icon": "assets/icon.webp",
+  "platforms": [
+    {
+      "id": "android",
+      "name": "Android",
+      "icon": "android",
+      "url": "https://play.google.com/store/apps/details?id=com.bigotitech.rokub10000",
+      "status": "available"
+    }
+  ],
+  "features": [
+    { "icon": "dice", "text": "Classic 10000 rules" },
+    { "icon": "sparkles", "text": "Intuitive interface" },
+    { "icon": "users", "text": "Local multiplayer" },
+    { "icon": "chart-bar", "text": "Game statistics" },
+    { "icon": "ban", "text": "No intrusive ads" },
+    { "icon": "wifi-off", "text": "Works offline" }
+  ],
+  "screenshots": [
+    { "src": "feature/applications/rokub-10000/assets/screenshots/1.png", "alt": "Rokub 10000 main screen" },
+    { "src": "feature/applications/rokub-10000/assets/screenshots/2.png", "alt": "Game in progress" },
+    { "src": "feature/applications/rokub-10000/assets/screenshots/3.png", "alt": "Dice selection" },
+    { "src": "feature/applications/rokub-10000/assets/screenshots/4.png", "alt": "Game statistics" }
+  ],
+  "cta": {
+    "primary": {
+      "text": "Google Play",
+      "url": "https://play.google.com/store/apps/details?id=com.bigotitech.rokub10000",
+      "disabled": false
+    },
+    "secondary": {
+      "text": "Privacy Policy",
+      "url": "privacy/"
+    }
+  },
+  "meta": {
+    "metaDescription": "Rokub 10000 - The classic dice game where strategy and luck combine. Developed by BigotiTech."
+  }
+}

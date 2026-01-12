@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Noticias y actualizaciones de BigotiTech. Mantente al dia de nuestros proyectos y lanzamientos.">
+    <title>Noticias - BigotiTech</title>
+    <link rel="icon" type="image/png" href="../../core/assets/brand/logo-bigotitech.png">
+    <link rel="stylesheet" href="../../core/styles/main.css">
+    <script src="../../core/utils/i18n.js" defer></script>
+    <script src="../../core/utils/icons.js" defer></script>
+    <script src="../../core/utils/data-loader.js" defer></script>
+    <script src="../../core/components/header.js" defer></script>
+    <script src="../../core/components/footer.js" defer></script>
+    <script src="components/news-hero.js" defer></script>
+    <script src="components/news.js" defer></script>
+</head>
+
+<body data-depth="2" data-base-path="../../" data-root-path="../../">
+    <bigoti-header class="header" depth="2"></bigoti-header>
+
+    <bigoti-news-hero></bigoti-news-hero>
+
+    <main>
+        <!-- News Section -->
+        <section class="section-fw">
+            <div class="section-fw__inner">
+                <bigoti-news max="10" depth="2"></bigoti-news>
+            </div>
+        </section>
+    </main>
+
+    <bigoti-footer class="footer" depth="2"></bigoti-footer>
+</body>
+
+</html>

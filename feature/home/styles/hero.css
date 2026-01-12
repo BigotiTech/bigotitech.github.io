@@ -1,0 +1,289 @@
+/* ============================================
+   HERO - Header section
+   Diseño inspirado en Rokub 10000
+   ============================================ */
+
+.hero {
+    position: relative;
+    background: linear-gradient(135deg, #6200EE 0%, #7C4DFF 50%, #9C7CFF 100%);
+    padding: var(--space-20) var(--space-6);
+    overflow: hidden;
+}
+
+/* Capa diagonal clara (como en el icono de la app) */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(179, 136, 255, 0.4) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Brillo superior */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+/* Contenedor para los elementos decorativos */
+.hero__decorations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* Círculos decorativos flotantes */
+.hero__circle {
+    position: absolute;
+    border-radius: 50%;
+    animation: float 8s ease-in-out infinite;
+}
+
+.hero__circle--1 {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    right: 10%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation-duration: 8s;
+}
+
+.hero__circle--2 {
+    width: 300px;
+    height: 300px;
+    bottom: -100px;
+    left: -50px;
+    background: radial-gradient(circle, rgba(179, 136, 255, 0.3) 0%, transparent 70%);
+    animation-duration: 10s;
+    animation-direction: reverse;
+}
+
+.hero__circle--3 {
+    width: 150px;
+    height: 150px;
+    top: 30%;
+    left: 5%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+    animation-duration: 6s;
+}
+
+.hero__circle--4 {
+    width: 180px;
+    height: 180px;
+    bottom: 20%;
+    right: 5%;
+    background: radial-gradient(circle, rgba(3, 218, 198, 0.15) 0%, transparent 70%);
+    animation-duration: 9s;
+    animation-direction: reverse;
+}
+
+/* Dados decorativos pequeños */
+.hero__dice {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    animation: dice-float 6s ease-in-out infinite;
+}
+
+.hero__dice--1 {
+    top: 20%;
+    left: 8%;
+    animation-delay: 0s;
+}
+
+.hero__dice--2 {
+    top: 40%;
+    right: 12%;
+    animation-delay: 1s;
+    width: 16px;
+    height: 16px;
+}
+
+.hero__dice--3 {
+    bottom: 25%;
+    left: 15%;
+    animation-delay: 2s;
+    width: 24px;
+    height: 24px;
+}
+
+.hero__dice--4 {
+    bottom: 35%;
+    right: 8%;
+    animation-delay: 3s;
+    width: 14px;
+    height: 14px;
+}
+
+/* Cuadrados decorativos pequeños (como en el logo) */
+.hero__square {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(179, 136, 255, 0.4);
+    border-radius: 2px;
+}
+
+.hero__square--1 { top: 15%; left: 3%; }
+.hero__square--2 { top: 60%; left: 7%; }
+.hero__square--3 { top: 25%; right: 5%; }
+.hero__square--4 { top: 70%; right: 10%; }
+.hero__square--5 { bottom: 15%; left: 20%; }
+.hero__square--6 { bottom: 40%; right: 3%; }
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-25px) scale(1.05);
+    }
+}
+
+@keyframes dice-float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.08;
+    }
+    50% {
+        transform: translateY(-15px) rotate(15deg);
+        opacity: 0.12;
+    }
+}
+
+/* Modifiers */
+.hero--compact {
+    padding: calc(var(--space-10) + 60px) var(--space-6) var(--space-16);
+}
+
+/* Content */
+.hero__content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Logo */
+.logo {
+    font-family: var(--font-display);
+    font-size: var(--text-5xl);
+    font-weight: var(--font-bold);
+    color: #FFFFFF;
+    letter-spacing: -2px;
+    margin-bottom: var(--space-2);
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.logo__accent {
+    background: linear-gradient(135deg, #03DAC6 0%, #00F5E4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Tagline */
+.tagline {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: var(--text-lg);
+    font-weight: var(--font-normal);
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Page titles */
+.page-title {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: var(--font-semibold);
+    color: #FFFFFF;
+    margin-bottom: var(--space-2);
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.page-subtitle {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: var(--text-base);
+}
+
+/* Back link */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    padding: var(--space-2) var(--space-5);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-6);
+    transition: all var(--transition-slow);
+}
+
+.back-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-4px);
+    text-decoration: none;
+    color: #FFFFFF;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        padding: var(--space-16) var(--space-5);
+    }
+
+    .hero--compact {
+        padding: calc(var(--space-8) + 60px) var(--space-5) var(--space-12);
+    }
+
+    .logo {
+        font-size: var(--text-4xl);
+    }
+
+    .page-title {
+        font-size: var(--text-2xl);
+    }
+
+    .hero__circle--1,
+    .hero__circle--2 {
+        transform: scale(0.7);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero--compact {
+        padding: calc(var(--space-6) + 60px) var(--space-4) var(--space-10);
+    }
+
+    .logo {
+        font-size: var(--text-3xl);
+    }
+
+    .hero__circle,
+    .hero__dice,
+    .hero__square {
+        display: none;
+    }
+}

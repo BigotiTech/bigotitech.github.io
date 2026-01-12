@@ -1,0 +1,61 @@
+{
+  "appId": "rokub-10000",
+  "appName": "Rokub 10000",
+  "lastUpdated": "2025-12",
+  "lastUpdatedFormatted": "Diciembre 2025",
+  "intro": "Esta Politica de Privacidad describe como <strong>Rokub 10000</strong> recopila, usa y comparte informacion cuando utilizas nuestra aplicacion movil.",
+  "sections": [
+    {
+      "id": "info-collected",
+      "title": "1. Informacion que Recopilamos",
+      "content": "<p>Nuestra aplicacion <strong>no recopila informacion personal identificable</strong> directamente. Sin embargo, utilizamos servicios de terceros que pueden recopilar informacion para mostrar anuncios.</p><h3>Datos del Juego</h3><p>La aplicacion almacena localmente en tu dispositivo:</p><ul><li>Nombres de jugadores que crees</li><li>Puntuaciones e historial de partidas</li><li>Preferencias de configuracion (sonido, vibracion, modo oscuro)</li></ul><div class=\"highlight\"><p><strong>Importante:</strong> Estos datos se guardan unicamente en tu dispositivo y no se transmiten a ningun servidor externo.</p></div>"
+    },
+    {
+      "id": "third-party",
+      "title": "2. Servicios de Terceros",
+      "content": "<p>Utilizamos <strong>Google AdMob</strong> para mostrar anuncios en la aplicacion. Google AdMob puede recopilar cierta informacion para proporcionar anuncios personalizados:</p><ul><li>Identificadores de dispositivo</li><li>Datos de uso de la aplicacion</li><li>Informacion de ubicacion aproximada (basada en IP)</li><li>Datos de interaccion con anuncios</li></ul><p>Para mas informacion:</p><ul><li><a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Politica de Privacidad de Google</a></li><li><a href=\"https://policies.google.com/technologies/partner-sites\" target=\"_blank\" rel=\"noopener\">Como Google usa la informacion</a></li></ul>"
+    },
+    {
+      "id": "ads",
+      "title": "3. Anuncios",
+      "content": "<p>La aplicacion muestra los siguientes tipos de anuncios:</p><ul><li><strong>Banners:</strong> Anuncios pequenos en la parte inferior de algunas pantallas.</li><li><strong>Interstitiales:</strong> Anuncios a pantalla completa despues de completar una partida.</li></ul><p>Puedes optar por no recibir anuncios personalizados ajustando la configuracion de anuncios de Google en tu dispositivo.</p>"
+    },
+    {
+      "id": "permissions",
+      "title": "4. Permisos de la Aplicacion",
+      "content": "<ul><li><strong>Internet:</strong> Necesario para cargar y mostrar anuncios.</li><li><strong>Estado de red:</strong> Para verificar la conectividad antes de cargar anuncios.</li><li><strong>Vibracion:</strong> Para retroalimentacion tactil durante el juego (opcional).</li></ul>"
+    },
+    {
+      "id": "security",
+      "title": "5. Seguridad de los Datos",
+      "content": "<p>Todos los datos del juego se almacenan localmente en tu dispositivo. No transmitimos ni almacenamos tus datos en servidores externos. La seguridad de tus datos depende de las medidas de seguridad de tu propio dispositivo.</p>"
+    },
+    {
+      "id": "children",
+      "title": "6. Privacidad de los Ninos",
+      "content": "<p>Nuestra aplicacion no esta dirigida especificamente a ninos menores de 13 anos. No recopilamos intencionalmente informacion personal de ninos. Si eres padre o tutor y crees que tu hijo nos ha proporcionado informacion personal, por favor contactanos.</p>"
+    },
+    {
+      "id": "changes",
+      "title": "7. Cambios en esta Politica",
+      "content": "<p>Podemos actualizar nuestra Politica de Privacidad ocasionalmente. Te notificaremos cualquier cambio publicando la nueva Politica de Privacidad en esta pagina y actualizando la fecha de \"Ultima actualizacion\".</p>"
+    },
+    {
+      "id": "rights",
+      "title": "8. Tus Derechos",
+      "content": "<p>Tienes derecho a:</p><ul><li>Eliminar todos los datos del juego desinstalando la aplicacion</li><li>Optar por no recibir anuncios personalizados a traves de la configuracion de tu dispositivo</li><li>Contactarnos para cualquier pregunta sobre tus datos</li></ul>"
+    },
+    {
+      "id": "contact",
+      "title": "9. Contacto",
+      "content": "<p>Si tienes preguntas o comentarios sobre esta Politica de Privacidad, puedes contactarnos:</p>",
+      "hasContact": true
+    }
+  ],
+  "contact": {
+    "email": "bigotitech@proton.me"
+  },
+  "meta": {
+    "metaDescription": "Politica de Privacidad de Rokub 10000 - BigotiTech"
+  }
+}
