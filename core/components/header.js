@@ -66,6 +66,7 @@ class BigotiHeader extends HTMLElement {
 
                 <div class="header__mobile-menu">
                     <ul class="header__menu">
+                        <li><a href="${rootPath || './'}" class="header__link">${t('nav.home', 'Inicio')}</a></li>
                         <li><a href="${isHome ? '#about' : rootPath + '#about'}" class="header__link">${t('nav.about', 'Nosotros')}</a></li>
                         <li><a href="${isHome ? '#apps' : rootPath + '#apps'}" class="header__link">${t('nav.apps', 'Apps')}</a></li>
                         <li><a href="${isHome ? '#team' : rootPath + '#team'}" class="header__link">${t('nav.team', 'Equipo')}</a></li>
