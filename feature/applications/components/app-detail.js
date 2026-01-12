@@ -245,7 +245,6 @@ class BigotiAppDetail extends HTMLElement {
         const data = this.appData;
         const screenshotsLabel = this.t('common.screenshots', 'Capturas de pantalla');
         const featuresLabel = this.t('common.features', 'Caracteristicas');
-        const soonLabel = this.t('common.soon', 'Pronto');
 
         // Build platforms display
         const platformsHtml = data.platforms.map(p => `
@@ -263,16 +262,14 @@ class BigotiAppDetail extends HTMLElement {
         `).join('');
 
         // Build screenshots carousel
-        const hasScreenshots = data.screenshots.length > 0;
+        const hasScreenshots = data.screenshots && data.screenshots.length > 0;
         const screenshotsHtml = hasScreenshots
             ? data.screenshots.map((s, i) => `
                 <div class="app-detail-carousel__slide" data-index="${i}">
                     <img src="${this.basePath}${s.src}" alt="${s.alt}" loading="lazy">
                 </div>
             `).join('')
-            : `
-                <div class="app-detail-carousel__slide app-detail-carousel__slide--placeholder">${soonLabel}</div>
-            `;
+            : '';
 
         const dotsHtml = hasScreenshots && data.screenshots.length > 1
             ? data.screenshots.map((_, i) => `
@@ -320,12 +317,13 @@ class BigotiAppDetail extends HTMLElement {
                 </div>
             </section>
 
+            ${hasScreenshots ? `
             <!-- Screenshots Carousel -->
             <section class="app-detail-screenshots">
                 <div class="app-detail-screenshots__inner">
                     <h2 class="app-detail-screenshots__title">${screenshotsLabel}</h2>
                     <div class="app-detail-carousel">
-                        ${hasScreenshots && data.screenshots.length > 1 ? `
+                        ${data.screenshots.length > 1 ? `
                         <button class="app-detail-carousel__nav app-detail-carousel__nav--prev" aria-label="Anterior">
                             ${this.icon('arrow-left', { size: 24 })}
                         </button>
@@ -333,7 +331,7 @@ class BigotiAppDetail extends HTMLElement {
                         <div class="app-detail-carousel__track">
                             ${screenshotsHtml}
                         </div>
-                        ${hasScreenshots && data.screenshots.length > 1 ? `
+                        ${data.screenshots.length > 1 ? `
                         <button class="app-detail-carousel__nav app-detail-carousel__nav--next" aria-label="Siguiente">
                             ${this.icon('arrow-right', { size: 24 })}
                         </button>
@@ -342,6 +340,7 @@ class BigotiAppDetail extends HTMLElement {
                     ${dotsHtml ? `<div class="app-detail-carousel__dots">${dotsHtml}</div>` : ''}
                 </div>
             </section>
+            ` : ''}
 
             <!-- CTA -->
             <section class="app-detail-cta">
