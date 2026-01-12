@@ -57,32 +57,42 @@ class BigotiHeader extends HTMLElement {
                     <img src="${basePath}core/assets/brand/logo-bigotitech.png" alt="BigotiTech" class="header__logo-img">
                     <span class="header__logo-text">Bigoti<span>Tech</span></span>
                 </a>
-                <ul class="header__menu">
-                    <li><a href="${isHome ? '#about' : rootPath + '#about'}" class="header__link">${t('nav.about', 'Nosotros')}</a></li>
-                    <li><a href="${isHome ? '#apps' : rootPath + '#apps'}" class="header__link">${t('nav.apps', 'Apps')}</a></li>
-                    <li><a href="${isHome ? '#team' : rootPath + '#team'}" class="header__link">${t('nav.team', 'Equipo')}</a></li>
-                    <li><a href="${rootPath}feature/news/" class="header__link">${t('nav.news', 'Noticias')}</a></li>
-                </ul>
-                <div class="header__lang">
-                    <button class="header__lang-btn" aria-label="Cambiar idioma">
-                        <span class="header__lang-current">${currentLang.toUpperCase()}</span>
-                        <svg class="header__lang-icon" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                            <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    <div class="header__lang-dropdown">
-                        ${langs.map(lang => `
-                            <button class="header__lang-option ${lang === currentLang ? 'header__lang-option--active' : ''}"
-                                    data-lang="${lang}">
-                                ${lang.toUpperCase()}
-                            </button>
-                        `).join('')}
+
+                <button class="header__hamburger" aria-label="Abrir menú" aria-expanded="false">
+                    <span class="header__hamburger-line"></span>
+                    <span class="header__hamburger-line"></span>
+                    <span class="header__hamburger-line"></span>
+                </button>
+
+                <div class="header__mobile-menu">
+                    <ul class="header__menu">
+                        <li><a href="${isHome ? '#about' : rootPath + '#about'}" class="header__link">${t('nav.about', 'Nosotros')}</a></li>
+                        <li><a href="${isHome ? '#apps' : rootPath + '#apps'}" class="header__link">${t('nav.apps', 'Apps')}</a></li>
+                        <li><a href="${isHome ? '#team' : rootPath + '#team'}" class="header__link">${t('nav.team', 'Equipo')}</a></li>
+                        <li><a href="${rootPath}feature/news/" class="header__link">${t('nav.news', 'Noticias')}</a></li>
+                    </ul>
+                    <div class="header__lang">
+                        <button class="header__lang-btn" aria-label="Cambiar idioma">
+                            <span class="header__lang-current">${currentLang.toUpperCase()}</span>
+                            <svg class="header__lang-icon" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="header__lang-dropdown">
+                            ${langs.map(lang => `
+                                <button class="header__lang-option ${lang === currentLang ? 'header__lang-option--active' : ''}"
+                                        data-lang="${lang}">
+                                    ${lang.toUpperCase()}
+                                </button>
+                            `).join('')}
+                        </div>
                     </div>
                 </div>
             </nav>
         `;
 
         this.setupLangSelector();
+        this.setupMobileMenu();
     }
 
     setupLangSelector() {
@@ -113,6 +123,43 @@ class BigotiHeader extends HTMLElement {
                 }
                 langDropdown.classList.remove('header__lang-dropdown--open');
             });
+        });
+    }
+
+    setupMobileMenu() {
+        const hamburger = this.querySelector('.header__hamburger');
+        const mobileMenu = this.querySelector('.header__mobile-menu');
+        const menuLinks = this.querySelectorAll('.header__link');
+
+        if (!hamburger || !mobileMenu) return;
+
+        // Toggle mobile menu
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = mobileMenu.classList.toggle('header__mobile-menu--open');
+            hamburger.classList.toggle('header__hamburger--active', isOpen);
+            hamburger.setAttribute('aria-expanded', isOpen);
+            document.body.classList.toggle('menu-open', isOpen);
+        });
+
+        // Close menu when clicking a link
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('header__mobile-menu--open');
+                hamburger.classList.remove('header__hamburger--active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('menu-open');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!this.contains(e.target)) {
+                mobileMenu.classList.remove('header__mobile-menu--open');
+                hamburger.classList.remove('header__hamburger--active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('menu-open');
+            }
         });
     }
 }

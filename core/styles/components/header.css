@@ -171,7 +171,81 @@
     color: white;
 }
 
-/* Responsive */
+/* Hamburger Button - Hidden on desktop */
+.header__hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    z-index: 101;
+}
+
+.header__hamburger:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.header__hamburger-line {
+    display: block;
+    height: 3px;
+    background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0.9) 100%);
+    border-radius: 3px;
+    transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.header__hamburger-line:nth-child(1) {
+    width: 22px;
+}
+
+.header__hamburger-line:nth-child(2) {
+    width: 18px;
+}
+
+.header__hamburger-line:nth-child(3) {
+    width: 22px;
+}
+
+/* Hamburger hover - lines animate */
+.header__hamburger:hover .header__hamburger-line:nth-child(2) {
+    width: 22px;
+}
+
+/* Hamburger animation when active */
+.header__hamburger--active .header__hamburger-line:nth-child(1) {
+    width: 22px;
+    transform: translateY(9px) rotate(45deg);
+}
+
+.header__hamburger--active .header__hamburger-line:nth-child(2) {
+    width: 0;
+    opacity: 0;
+}
+
+.header__hamburger--active .header__hamburger-line:nth-child(3) {
+    width: 22px;
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Mobile menu wrapper - visible on desktop */
+.header__mobile-menu {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+/* Responsive - Tablet */
 @media (max-width: 768px) {
     .header {
         padding: var(--space-3) var(--space-4);
@@ -186,21 +260,74 @@
         font-size: var(--text-lg);
     }
 
+    /* Show hamburger */
+    .header__hamburger {
+        display: flex;
+    }
+
+    /* Mobile menu styles */
+    .header__mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 80px var(--space-6) var(--space-6);
+        background: linear-gradient(135deg, #6200EE 0%, #7C4DFF 100%);
+        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+        transition: right var(--transition-slow);
+        z-index: 100;
+    }
+
+    .header__mobile-menu--open {
+        right: 0;
+    }
+
     .header__menu {
-        gap: var(--space-3);
+        flex-direction: column;
+        gap: var(--space-2);
+        width: 100%;
     }
 
     .header__link {
-        font-size: var(--text-xs);
-        padding: var(--space-2) var(--space-3);
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: var(--text-base);
+        padding: var(--space-3) var(--space-4);
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .header__link:hover {
+        background: rgba(255, 255, 255, 0.2);
     }
 
     .header__lang {
-        margin-left: var(--space-3);
+        margin-left: 0;
+        margin-top: var(--space-4);
+        width: 100%;
     }
 
     .header__lang-btn {
-        padding: var(--space-1) var(--space-2);
+        width: 100%;
+        justify-content: center;
+        padding: var(--space-3);
+        font-size: var(--text-sm);
+    }
+
+    .header__lang-dropdown {
+        left: 0;
+        right: 0;
+        min-width: auto;
+    }
+
+    /* Prevent body scroll when menu is open */
+    body.menu-open {
+        overflow: hidden;
     }
 }
 
@@ -209,25 +336,8 @@
         display: none;
     }
 
-    .header__menu {
-        gap: var(--space-2);
-    }
-
-    .header__link {
-        padding: var(--space-1) var(--space-2);
-        font-size: 0.65rem;
-    }
-
-    .header__lang {
-        margin-left: var(--space-2);
-    }
-
-    .header__lang-btn {
-        padding: var(--space-1) var(--space-2);
-        font-size: 0.6rem;
-    }
-
-    .header__lang-current {
-        font-size: 0.6rem;
+    .header__mobile-menu {
+        width: 100%;
+        right: -100%;
     }
 }
