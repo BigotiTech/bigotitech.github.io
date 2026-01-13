@@ -47,6 +47,7 @@
 }
 
 .btn--filled:hover {
+    color: #FFFFFF;
     box-shadow: 0 8px 20px rgba(98, 0, 238, 0.4);
 }
 
