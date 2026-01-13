@@ -267,11 +267,11 @@
 }
 
 .app-detail-carousel__nav--prev {
-    left: -24px;
+    left: 16px;
 }
 
 .app-detail-carousel__nav--next {
-    right: -24px;
+    right: 16px;
 }
 
 /* Dots navigation */
